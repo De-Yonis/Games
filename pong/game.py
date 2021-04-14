@@ -36,7 +36,7 @@ ball = turtle.Turtle()
 ball.speed(0) #speed of the animation, sets it to maximum amount of speed
 ball.shape("circle")
 ball.color("white")
-ball.penup() # so we dont draw a line everytime the turtule movies
+ball.penup() # so we don't draw a line everytime the turtle moves
 ball.goto(0,0) # As its on the opposite side of the screen 
 ball.dx = 1.8 # speed of the ball movement and direction it starts depending on the axis 
 ball.dy = 1.8
@@ -88,12 +88,12 @@ def paddle_b_down():
 window.listen() # This listens for keyboard input
 
 #FOR A
-window.onkeypress(paddle_a_up,"w") # when the user presses "w" call the function paddle_a_up
-window.onkeypress(paddle_a_down,"s") # when the user presses "w" call the function paddle_a_up
+window.onkeypress(paddle_a_up,"w") 
+window.onkeypress(paddle_a_down,"s") 
 
 #FOR B
-window.onkeypress(paddle_b_up,"Up") # when the user presses "w" call the function paddle_a_up
-window.onkeypress(paddle_b_down,"Down") # when the user presses "w" call the function paddle_a_up
+window.onkeypress(paddle_b_up,"Up") 
+window.onkeypress(paddle_b_down,"Down") 
 
 
 
@@ -134,7 +134,7 @@ while True:
         ball.goto(0,0)
         ball.dx *= -1
         b += 1
-        os.system("afplay all_right_homer.wav&")
+        os.system("afplay all_right_homer.wav&") #The & prevents lagging of sound 
         board.clear()
         board.write("Player A: {}      Player B: {}".format(a,b), align="center", font=("Ariel",22,"normal"))
 
